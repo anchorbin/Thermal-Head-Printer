@@ -8,12 +8,12 @@ int test_led(int cont)
 	for(i=0;i<cont;i++)
 	{
 		DI=0;
-		delay(200);
+		delay(300);
 		DI=1;
-		delay(200);
+		delay(300);
 	}
 
-	delay(500);
+	delay(800);
 
 }
 

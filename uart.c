@@ -1,12 +1,10 @@
 #include<reg52.h>
 #include"uart.h"
 
-
 unsigned  char xdata rx_buf[64];							  
 unsigned  int rx_len;
 unsigned  char xdata tx_buf[64];
 unsigned  char tx_count,tx_size;							  //发送标致
-
 
 void UART_init(void)
 {
@@ -38,11 +36,6 @@ void UART_send(unsigned char xdata *buf ,int len)
 
 }
 
-int UART_RecvCnt(void)
-{
-	return rx_len;
-
-}
 
 void UART_receive(unsigned char xdata *buf ,int len)				 
 {
@@ -81,4 +74,10 @@ void URAT_break(void) interrupt 4    									   //串口中断
 void UART_clear(void)
 {
 	rx_len=0;	
+}
+
+int UART_RecvCnt(void)
+{
+	return rx_len;
+
 }
