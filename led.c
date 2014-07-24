@@ -2,7 +2,7 @@
 #include"bsp.h"
 #include"delay.h"
 
-int test_led(int cont)
+void test_led(int cont)
 {
 	int i;
 	for(i=0;i<cont;i++)
